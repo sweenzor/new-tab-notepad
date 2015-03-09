@@ -1,11 +1,13 @@
-# Chrome "new tab" page
-
-Based on [coleifer's](https://github.com/coleifer/chrome-extensions)
+# Chrome "New Tab Page" Notepad
 
 ## Features
 
-* Replace new tab page with "improved" version.
-* Persistent "notepad" using Chrome's storage API.
+* Persistent notepad on New Tab Page using Chrome's storage API.
+
+## Credits
+
+* Chrome extensions by [coleifer](https://github.com/coleifer/chrome-extensions)
+* Textarea CSS by [eliotsykes](http://www.webdevbreak.com/episodes/zen-textarea-pure-css/demo)
 
 ## Screenshot
 
