@@ -11,4 +11,4 @@
 
 ## Screenshot
 
-![](http://i.imgur.com/2oexNI1.png)
+![](https://raw.githubusercontent.com/sweenzor/new-tab-notepad/master/screenshot.png)
