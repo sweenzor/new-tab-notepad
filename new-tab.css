@@ -1,143 +1,170 @@
-  textarea, button {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 1em;
+}
 
-  form {
-    margin-top: 2.5em;
-    max-width: 30em;
-  }
+body > a {
+  background-color: #333;
+  color: white;
+  display: inline-block;
+  padding: 1em;
+  text-decoration: none;
+}
 
-  label[for=comment] {
-    color: #339966;
-    display: block;
-    font-style: italic;
-    margin-bottom: 0.375em;
-  }
+body > a:hover {
+  background-color: orange;
+}
 
-  .zennable {
-    position: relative;
-  }
+h1 {
+  font-size: 1.5em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 2em;
+  text-transform: uppercase;
+}
 
-  .zennable input {
-    display: none;
-  }
+textarea, button {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
-  .zennable label {
-    position: absolute;
-    right: 0;
-    font-size: 0.75em;
-    text-transform: uppercase;
-    font-variant: small-caps;
-    letter-spacing: 1px;
-    font-weight: 500;
-    padding: 0.375em;
-    color: #999;
-    top: -2.375em;
-  }
+form {
+  margin-top: 2.5em;
+  max-width: 30em;
+}
 
-  .zennable .expander {
-    border-radius: 3px;
-    background-color: #f6f6f6;
-  }
+label[for=comment] {
+  color: #339966;
+  display: block;
+  font-style: italic;
+  margin-bottom: 0.375em;
+}
 
-  .zennable .shrinker {
-    display: none;
-    background-color: white;
-    opacity: 0.9;
-  }
+.zennable {
+  position: relative;
+}
 
-  .zennable label::before {
-    background-repeat: no-repeat;
-    background-size: 1em 1em;
-    content: ' ';
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    margin: 0 0.5em -0.1em 0;
-    opacity: 0.5;
-  }
+.zennable input {
+  display: none;
+}
 
-  .zennable .expander::before {
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiDQoJIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDMyIDMyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMiAzMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkxheWVyXzEiPg0KPC9nPg0KPGcgaWQ9ImZ1bGxzY3JlZW4iPg0KCTxnPg0KCQk8cG9seWdvbiBzdHlsZT0iZmlsbDojNEU0RTUwOyIgcG9pbnRzPSIyNy40MTQsMjQuNTg2IDIyLjgyOCwyMCAyMCwyMi44MjggMjQuNTg2LDI3LjQxNCAyMCwzMiAzMiwzMiAzMiwyMCAJCSIvPg0KCQk8cG9seWdvbiBzdHlsZT0iZmlsbDojNEU0RTUwOyIgcG9pbnRzPSIxMiwwIDAsMCAwLDEyIDQuNTg2LDcuNDE0IDkuMTI5LDExLjk1MyAxMS45NTcsOS4xMjUgNy40MTQsNC41ODYgCQkiLz4NCgkJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzRFNEU1MDsiIHBvaW50cz0iMTIsMjIuODI4IDkuMTcyLDIwIDQuNTg2LDI0LjU4NiAwLDIwIDAsMzIgMTIsMzIgNy40MTQsMjcuNDE0IAkJIi8+DQoJCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiM0RTRFNTA7IiBwb2ludHM9IjMyLDAgMjAsMCAyNC41ODYsNC41ODYgMjAuMDQzLDkuMTI1IDIyLjg3MSwxMS45NTMgMjcuNDE0LDcuNDE0IDMyLDEyIAkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=');
-  }
+.zennable label {
+  position: absolute;
+  right: 0;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  font-weight: 500;
+  padding: 0.375em;
+  color: #999;
+  top: -2.375em;
+}
 
-  .zennable .shrinker::before {
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiDQoJIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDMyIDMyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMiAzMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkxheWVyXzEiPg0KPC9nPg0KPGcgaWQ9ImZ1bGxzY3JlZW5feDVGX2V4aXQiPg0KCTxnPg0KCQk8cG9seWdvbiBzdHlsZT0iZmlsbDojNEU0RTUwOyIgcG9pbnRzPSIyNC41ODYsMjcuNDE0IDI5LjE3MiwzMiAzMiwyOS4xNzIgMjcuNDE0LDI0LjU4NiAzMiwyMCAyMCwyMCAyMCwzMiAJCSIvPg0KCQk8cG9seWdvbiBzdHlsZT0iZmlsbDojNEU0RTUwOyIgcG9pbnRzPSIwLDEyIDEyLDEyIDEyLDAgNy40MTQsNC41ODYgMi44NzUsMC4wNDMgMC4wNDcsMi44NzEgNC41ODYsNy40MTQgCQkiLz4NCgkJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzRFNEU1MDsiIHBvaW50cz0iMCwyOS4xNzIgMi44MjgsMzIgNy40MTQsMjcuNDE0IDEyLDMyIDEyLDIwIDAsMjAgNC41ODYsMjQuNTg2IAkJIi8+DQoJCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiM0RTRFNTA7IiBwb2ludHM9IjIwLDEyIDMyLDEyIDI3LjQxNCw3LjQxNCAzMS45NjEsMi44NzEgMjkuMTMzLDAuMDQzIDI0LjU4Niw0LjU4NiAyMCwwIAkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=');
-  }
+.zennable .expander {
+  border-radius: 3px;
+  background-color: #f6f6f6;
+}
 
-  .zennable label:hover {
-    color: #333;
-  }
+.zennable .shrinker {
+  display: none;
+  background-color: white;
+  opacity: 0.9;
+}
 
-  .zennable label:hover::before {
-    opacity: 1.0;
-  }
+.zennable label::before {
+  background-repeat: no-repeat;
+  background-size: 1em 1em;
+  content: ' ';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin: 0 0.5em -0.1em 0;
+  opacity: 0.5;
+}
 
-  .zennable textarea {
-    background-color: #f6f6f6;
-    border: 0;
-    border-radius: 3px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    color: #333;
-    display: block;
-    font-size: 1em;
-    height: 10em;
-    line-height: 1.5em;
-    padding: 0.25em 0.5em;
-    width: 100%;
-  }
+.zennable .expander::before {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiDQoJIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDMyIDMyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMiAzMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkxheWVyXzEiPg0KPC9nPg0KPGcgaWQ9ImZ1bGxzY3JlZW4iPg0KCTxnPg0KCQk8cG9seWdvbiBzdHlsZT0iZmlsbDojNEU0RTUwOyIgcG9pbnRzPSIyNy40MTQsMjQuNTg2IDIyLjgyOCwyMCAyMCwyMi44MjggMjQuNTg2LDI3LjQxNCAyMCwzMiAzMiwzMiAzMiwyMCAJCSIvPg0KCQk8cG9seWdvbiBzdHlsZT0iZmlsbDojNEU0RTUwOyIgcG9pbnRzPSIxMiwwIDAsMCAwLDEyIDQuNTg2LDcuNDE0IDkuMTI5LDExLjk1MyAxMS45NTcsOS4xMjUgNy40MTQsNC41ODYgCQkiLz4NCgkJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzRFNEU1MDsiIHBvaW50cz0iMTIsMjIuODI4IDkuMTcyLDIwIDQuNTg2LDI0LjU4NiAwLDIwIDAsMzIgMTIsMzIgNy40MTQsMjcuNDE0IAkJIi8+DQoJCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiM0RTRFNTA7IiBwb2ludHM9IjMyLDAgMjAsMCAyNC41ODYsNC41ODYgMjAuMDQzLDkuMTI1IDIyLjg3MSwxMS45NTMgMjcuNDE0LDcuNDE0IDMyLDEyIAkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=');
+}
 
-  .zennable textarea:focus {
-    background-color: white;
-  }
+.zennable .shrinker::before {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiDQoJIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDMyIDMyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMiAzMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkxheWVyXzEiPg0KPC9nPg0KPGcgaWQ9ImZ1bGxzY3JlZW5feDVGX2V4aXQiPg0KCTxnPg0KCQk8cG9seWdvbiBzdHlsZT0iZmlsbDojNEU0RTUwOyIgcG9pbnRzPSIyNC41ODYsMjcuNDE0IDI5LjE3MiwzMiAzMiwyOS4xNzIgMjcuNDE0LDI0LjU4NiAzMiwyMCAyMCwyMCAyMCwzMiAJCSIvPg0KCQk8cG9seWdvbiBzdHlsZT0iZmlsbDojNEU0RTUwOyIgcG9pbnRzPSIwLDEyIDEyLDEyIDEyLDAgNy40MTQsNC41ODYgMi44NzUsMC4wNDMgMC4wNDcsMi44NzEgNC41ODYsNy40MTQgCQkiLz4NCgkJPHBvbHlnb24gc3R5bGU9ImZpbGw6IzRFNEU1MDsiIHBvaW50cz0iMCwyOS4xNzIgMi44MjgsMzIgNy40MTQsMjcuNDE0IDEyLDMyIDEyLDIwIDAsMjAgNC41ODYsMjQuNTg2IAkJIi8+DQoJCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiM0RTRFNTA7IiBwb2ludHM9IjIwLDEyIDMyLDEyIDI3LjQxNCw3LjQxNCAzMS45NjEsMi44NzEgMjkuMTMzLDAuMDQzIDI0LjU4Niw0LjU4NiAyMCwwIAkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=');
+}
 
-  button {
-    background-color: #66cc99;
-    border: 0;
-    border-radius: 3px;
-    color: white;
-    cursor: pointer;
-    display: block;
-    font-size: 1em;
-    font-weight: 400;
-    letter-spacing: 1px;
-    margin-top: 0.25em;
-    padding: 1em;
-    text-transform: uppercase;
-    width: 100%;
-  }
+.zennable label:hover {
+  color: #333;
+}
 
-  .zennable input:checked ~ .zen-backdrop .expander {
-    display: none;
-  }
+.zennable label:hover::before {
+  opacity: 1.0;
+}
 
-  .zennable input:checked ~ .zen-backdrop .shrinker {
-    display: block;
-    position: absolute;
-    top: 0;
-  }
+.zennable textarea {
+  background-color: #f6f6f6;
+  border: 0;
+  border-radius: 3px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #333;
+  display: block;
+  font-size: 1em;
+  height: 10em;
+  line-height: 1.5em;
+  padding: 0.25em 0.5em;
+  width: 100%;
+}
 
-  .zennable input:checked ~ .zen-backdrop textarea {
-    height: 100%;
-    font-size: 1.375em;
-    max-width: 36em;
-    padding: 1em;
-    background-color: white;
-    margin: 0 auto;
-    border: 0;
-    resize: none;
-    border-radius: 0;
-    outline: none;
-  }
+.zennable textarea:focus {
+  background-color: white;
+}
 
-  .zennable input:checked ~ .zen-backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: white;
-  }
+button {
+  background-color: #66cc99;
+  border: 0;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 0.25em;
+  padding: 1em;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.zennable input:checked ~ .zen-backdrop .expander {
+  display: none;
+}
+
+.zennable input:checked ~ .zen-backdrop .shrinker {
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+.zennable input:checked ~ .zen-backdrop textarea {
+  height: 100%;
+  font-size: 1.375em;
+  max-width: 36em;
+  padding: 1em;
+  background-color: white;
+  margin: 0 auto;
+  border: 0;
+  resize: none;
+  border-radius: 0;
+  outline: none;
+}
+
+.zennable input:checked ~ .zen-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+}
 
 
