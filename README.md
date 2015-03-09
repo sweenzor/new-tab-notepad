@@ -1,8 +1,8 @@
-# Chrome "New Tab Page" Notepad
+# New Tab Notepad for Chrome
 
 ## Features
 
-* Persistent notepad on New Tab Page using Chrome's storage API.
+* Persistent notepad on the "New Tab" page using Chrome's storage API.
 
 ## Credits
 
