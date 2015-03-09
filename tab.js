@@ -1,4 +1,4 @@
-(function(bookmarkFolder, displayFavicons) {
+(function() {
 
   function _makeDelayed() {
     var timer = 0;
@@ -9,7 +9,7 @@
   }
 
   function bindNoteHandlers() {
-    var elem = document.getElementById('noteText'),
+    var elem = document.getElementById('note-text'),
         saveHandler = _makeDelayed();
     function save() {
       chrome.storage.sync.set({'noteText': elem.value});
@@ -25,4 +25,4 @@
   }
 
   bindNoteHandlers();
-})('Favorites', false);
+})();
