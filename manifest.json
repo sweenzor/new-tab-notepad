@@ -1,9 +1,9 @@
 {
   "name": "New Tab Notepad",
-  "description": "",
   "version": "0.1",
   "incognito": "split",
   "chrome_url_overrides": {"newtab": "start-page.html"},
-  "permissions": ["bookmarks", "history", "storage"],
+  "permissions": ["storage"],
+  "icons": {"128": "icon128.png"},
   "manifest_version": 2
 }
