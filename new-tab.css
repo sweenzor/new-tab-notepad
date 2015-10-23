@@ -19,35 +19,26 @@ label[for=comment] {
 }
 
 .zennable textarea {
-  background-color: #f6f6f6;
   border: 0;
-  border-radius: 3px;
+  border-radius: 10px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   color: #333;
   display: block;
   font-size: 1em;
-  height: 10em;
   line-height: 1.5em;
-  padding: 0.25em 0.5em;
   width: 100%;
+  padding: 1em;
+  height: 100%;
+  max-width: 100%;
+  background-color: white;
+  margin: 0 auto;
+  resize: none;
+  outline: none;
 }
 
 .zennable textarea:focus {
   background-color: white;
-}
-
-.zen-backdrop textarea {
-  height: 100%;
-  font-size: 6.375em;
-  max-width: 36em;
-  padding: 1em;
-  background-color: white;
-  margin: 0 auto;
-  border: 0;
-  resize: none;
-  border-radius: 0;
-  outline: none;
 }
 
 .zen-backdrop {
@@ -56,7 +47,8 @@ label[for=comment] {
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: white;
+  background-color: #f6f6f6;
+  padding: 1em;
 }
 
 
