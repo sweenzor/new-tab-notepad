@@ -8,11 +8,12 @@
 
 * [ ] Nicer icon, maybe something like [this](http://www.flaticon.com/free-icon/note_33410#term=notes&page=1&position=35)
 * [ ] Automate deployment to Chrome Web Store, based on [this](https://github.com/jonnor/chrome-webstore-deploy/)
+* [ ] Better Chrome Extension Javascript, based on [this](https://github.com/sidenotes/sidenotes)
 * [ ] Tests, lint.
 
 ## Credits
 
-* Chrome extensions by [coleifer](https://github.com/coleifer/chrome-extensions)
+* Chrome Extensions by [coleifer](https://github.com/coleifer/chrome-extensions)
 * Textarea CSS by [eliotsykes](http://www.webdevbreak.com/episodes/zen-textarea-pure-css/demo)
 
 ## Screenshot
