@@ -20,24 +20,16 @@
   `chrome.storage` and DOM. No dependencies needed.
 * `npm run lint` — ESLint via npx. Both run in CI on every push and PR.
 
-## Deploying
+## Releasing
 
-Pushing a tag like `v0.3` triggers a GitHub Actions workflow
-([`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)) that packages
-the extension and uploads it to the Chrome Web Store, auto-submitting for
-review.
+Bump `version` in `manifest.json`, zip the extension files, and upload by
+hand at the [Chrome Web Store developer dashboard](https://chrome.google.com/webstore/devconsole):
 
-One-time setup: generate OAuth credentials for the Chrome Web Store API
-(see [this guide](https://github.com/fregante/chrome-webstore-upload/blob/main/How%20to%20generate%20Google%20API%20keys.md))
-and add these repository secrets:
-
-* `CWS_EXTENSION_ID` — the extension ID from its Web Store URL
-* `CWS_CLIENT_ID`, `CWS_CLIENT_SECRET`, `CWS_REFRESH_TOKEN` — the OAuth credentials
+    zip -X new-tab-notepad.zip manifest.json start-page.html new-tab.css tab.js background.js options.html options.js options.css icon16.png icon48.png icon128.png
 
 ## Todo
 
 * [ ] Nicer icon, maybe something like [this](http://www.flaticon.com/free-icon/note_33410#term=notes&page=1&position=35)
-* [x] Automate deployment to Chrome Web Store — GitHub Actions, see Deploying above
 * [x] Better Chrome Extension Javascript — promise-based storage, `input` events, cross-tab sync
 * [x] Tests, lint — `node --test` behavioral suite + ESLint, run in CI.
 
