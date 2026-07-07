@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Package extension
-        run: zip -X new-tab-notepad.zip manifest.json start-page.html new-tab.css tab.js icon128.png
+        run: zip -X new-tab-notepad.zip manifest.json start-page.html new-tab.css tab.js icon16.png icon48.png icon128.png
 
       - name: Upload and publish
         run: npx --yes chrome-webstore-upload-cli@3 upload --source new-tab-notepad.zip --auto-publish

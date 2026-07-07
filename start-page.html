@@ -1,17 +1,17 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
   <title>New Tab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='new-tab.css' rel='stylesheet' type='text/css'>
+  <link href="new-tab.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-<div class="zennable">
   <div class="zen-backdrop">
-    <textarea id="note-text"></textarea>
+    <textarea id="note-text" aria-label="Notepad"></textarea>
   </div>
-</div>
+  <div id="sync-status" hidden>Note is too long to sync between devices &mdash; saved on this device only</div>
+  <script src="tab.js"></script>
 </body>
-
-<script src="tab.js"></script>
 </html>

@@ -1,62 +1,43 @@
-textarea, button {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-form {
-  margin-top: 2.5em;
-  max-width: 30em;
-}
-
-label[for=comment] {
-  color: #339966;
-  display: block;
-  font-style: italic;
-  margin-bottom: 0.375em;
-}
-
-.zennable {
-  position: relative;
-}
-
-.zennable textarea {
-  background-color: #f6f6f6;
-  border: 0;
-  border-radius: 3px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  color: #333;
-  display: block;
-  font-size: 1em;
-  height: 10em;
-  line-height: 1.5em;
-  padding: 0.25em 0.5em;
-  width: 100%;
-}
-
-.zennable textarea:focus {
-  background-color: white;
-}
-
-.zen-backdrop textarea {
-  height: 100%;
-  font-size: 6.375em;
-  max-width: 36em;
-  padding: 1em;
-  background-color: white;
-  margin: 0 auto;
-  border: 0;
-  resize: none;
-  border-radius: 0;
-  outline: none;
-}
-
 .zen-backdrop {
   position: fixed;
   top: 0;
   right: 0;
-  left: 0;
   bottom: 0;
+  left: 0;
   background-color: white;
 }
 
+.zen-backdrop textarea {
+  background-color: white;
+  border: 0;
+  box-sizing: border-box;
+  color: #333;
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 6.375em;
+  height: 100%;
+  line-height: 1.5em;
+  margin: 0 auto;
+  max-width: 36em;
+  outline: none;
+  padding: 1em;
+  resize: none;
+  width: 100%;
+}
 
+#sync-status {
+  position: fixed;
+  right: 1em;
+  bottom: 0.75em;
+  color: #80868b;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .zen-backdrop,
+  .zen-backdrop textarea {
+    background-color: #202124;
+    color: #e8eaed;
+  }
+}

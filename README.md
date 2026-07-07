@@ -3,6 +3,10 @@
 ## Features
 
 * Persistent notepad on the "New Tab" page using Chrome's storage API.
+* Syncs across your Chrome browsers; notes too long for the sync quota
+  automatically fall back to device-local storage.
+* Live-updates across open tabs, so a stale tab never clobbers newer text.
+* Dark mode, following the system setting.
 
 ## Deploying
 
@@ -22,7 +26,7 @@ and add these repository secrets:
 
 * [ ] Nicer icon, maybe something like [this](http://www.flaticon.com/free-icon/note_33410#term=notes&page=1&position=35)
 * [x] Automate deployment to Chrome Web Store — GitHub Actions, see Deploying above
-* [ ] Better Chrome Extension Javascript, based on [this](https://github.com/sidenotes/sidenotes)
+* [x] Better Chrome Extension Javascript — promise-based storage, `input` events, cross-tab sync
 * [ ] Tests, lint.
 
 ## Credits
