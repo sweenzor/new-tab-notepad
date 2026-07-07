@@ -1,6 +1,6 @@
 {
   "name": "New Tab Notepad",
-  "version": "0.3",
+  "version": "0.4",
   "description": "A persistent notepad on the new tab page. Notes sync across your Chrome browsers.",
   "incognito": "split",
   "chrome_url_overrides": {"newtab": "start-page.html"},
