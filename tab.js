@@ -39,7 +39,7 @@
     try {
       await chrome.storage.sync.set(payload);
       syncStatus.hidden = true;
-    } catch (e) {
+    } catch {
       // Over sync's per-item quota; the note is still saved locally.
       syncStatus.hidden = false;
     }

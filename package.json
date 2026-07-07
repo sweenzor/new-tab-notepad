@@ -1,0 +1,8 @@
+{
+  "name": "new-tab-notepad",
+  "private": true,
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\"",
+    "lint": "npx --yes eslint@9 ."
+  }
+}

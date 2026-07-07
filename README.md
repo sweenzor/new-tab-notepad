@@ -8,6 +8,12 @@
 * Live-updates across open tabs, so a stale tab never clobbers newer text.
 * Dark mode, following the system setting.
 
+## Development
+
+* `npm test` — behavioral tests that drive `tab.js` against a stubbed
+  `chrome.storage` and DOM. No dependencies needed.
+* `npm run lint` — ESLint via npx. Both run in CI on every push and PR.
+
 ## Deploying
 
 Pushing a tag like `v0.3` triggers a GitHub Actions workflow
@@ -27,7 +33,7 @@ and add these repository secrets:
 * [ ] Nicer icon, maybe something like [this](http://www.flaticon.com/free-icon/note_33410#term=notes&page=1&position=35)
 * [x] Automate deployment to Chrome Web Store — GitHub Actions, see Deploying above
 * [x] Better Chrome Extension Javascript — promise-based storage, `input` events, cross-tab sync
-* [ ] Tests, lint.
+* [x] Tests, lint — `node --test` behavioral suite + ESLint, run in CI.
 
 ## Credits
 
