@@ -6,6 +6,15 @@
   // apart from changes made in other tabs.
   let lastSaved = '';
 
+  const SETTINGS = {fontSizeEm: 6.375, spellcheck: true};
+
+  async function loadSettings() {
+    const stored = await chrome.storage.sync.get(Object.keys(SETTINGS));
+    Object.assign(SETTINGS, stored);
+    elem.style.fontSize = SETTINGS.fontSizeEm + 'em';
+    elem.spellcheck = SETTINGS.spellcheck;
+  }
+
   async function load() {
     const [local, sync] = await Promise.all([
       chrome.storage.local.get(['noteText', 'noteSavedAt']),
@@ -62,6 +71,12 @@
   // Mirror edits made in other tabs (or other machines, via sync) so a
   // stale tab never overwrites newer text.
   chrome.storage.onChanged.addListener(function(changes) {
+    if (changes.fontSizeEm) {
+      elem.style.fontSize = (changes.fontSizeEm.newValue ?? 6.375) + 'em';
+    }
+    if (changes.spellcheck) {
+      elem.spellcheck = changes.spellcheck.newValue ?? true;
+    }
     if (!changes.noteText) {
       return;
     }
@@ -77,5 +92,6 @@
     lastSaved = newText;
   });
 
+  loadSettings();
   load();
 })();

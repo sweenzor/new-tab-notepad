@@ -20,6 +20,7 @@ function makeElem() {
   return {
     value: '',
     hidden: true,
+    style: {},
     addEventListener(type, fn) {
       (handlers[type] ||= []).push(fn);
     },
@@ -68,9 +69,9 @@ function boot(localInit = {}, syncInit = {}, syncByteLimit = 8192) {
     storage: {local, sync, onChanged: {addListener: (fn) => listeners.push(fn)}},
   };
   eval(SOURCE);
-  const remoteChange = (text) =>
-    listeners.forEach((l) => l({noteText: {newValue: text}}));
-  return {local, sync, note, status, doc, remoteChange};
+  const fireChanges = (changes) => listeners.forEach((l) => l(changes));
+  const remoteChange = (text) => fireChanges({noteText: {newValue: text}});
+  return {local, sync, note, status, doc, remoteChange, fireChanges};
 }
 
 test('loads a legacy sync-only note (no timestamp)', async () => {
@@ -153,6 +154,25 @@ test('a blur with unchanged text writes nothing', async () => {
   t.note.fire('blur');
   await tick();
   assert.equal(t.local.data.noteSavedAt, savedAt);
+});
+
+test('applies default settings when none are stored', async () => {
+  const t = boot();
+  await tick();
+  assert.equal(t.note.style.fontSize, '6.375em');
+  assert.equal(t.note.spellcheck, true);
+});
+
+test('applies stored settings on load and live changes', async () => {
+  const t = boot({}, {fontSizeEm: 2, spellcheck: false});
+  await tick();
+  assert.equal(t.note.style.fontSize, '2em');
+  assert.equal(t.note.spellcheck, false);
+
+  t.fireChanges({fontSizeEm: {newValue: 3}});
+  assert.equal(t.note.style.fontSize, '3em');
+  t.fireChanges({spellcheck: {newValue: true}});
+  assert.equal(t.note.spellcheck, true);
 });
 
 test('hiding the tab saves pending text', async () => {

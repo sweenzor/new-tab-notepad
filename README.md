@@ -7,6 +7,12 @@
   automatically fall back to device-local storage.
 * Live-updates across open tabs, so a stale tab never clobbers newer text.
 * Dark mode, following the system setting.
+* Options for font size and spellcheck (right-click the toolbar icon &rarr;
+  Options); clicking the toolbar icon opens a new tab.
+
+> **Tip:** Chrome hides the bookmarks bar on custom new-tab pages. Press
+> <kbd>&#8984;&#8679;B</kbd> (Mac) or <kbd>Ctrl+Shift+B</kbd> (Windows/Linux)
+> to always show it.
 
 ## Development
 

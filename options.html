@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>New Tab Notepad Options</title>
+  <link href="options.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <label for="font-size">Font size <span id="font-size-value"></span></label>
+  <input type="range" id="font-size" min="1" max="8" step="0.125">
+
+  <label class="checkbox">
+    <input type="checkbox" id="spellcheck"> Spellcheck
+  </label>
+
+  <p class="hint">
+    Bookmarks bar missing on the new tab page? Chrome hides it on custom
+    new-tab pages &mdash; press <kbd>&#8984;&#8679;B</kbd> (Mac) or
+    <kbd>Ctrl+Shift+B</kbd> (Windows/Linux) to always show it.
+  </p>
+  <script src="options.js"></script>
+</body>
+</html>
