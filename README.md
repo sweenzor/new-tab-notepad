@@ -31,7 +31,8 @@ hand at the [Chrome Web Store developer dashboard](https://chrome.google.com/web
 
 ## Todo
 
-* [x] Nicer icon — drawn in `icon.svg`, rendered to PNGs
+* [x] Icon vectorized — `icon.svg` reproduces the original `icon128.png`
+  pixel-for-pixel when exported, and now also renders the 16/48px sizes
 * [x] Better Chrome Extension Javascript — promise-based storage, `input` events, cross-tab sync
 * [x] Tests, lint — `node --test` behavioral suite + ESLint, run in CI.
 

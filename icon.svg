@@ -1,9 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <rect x="6" y="6" width="116" height="116" rx="22" fill="#ffffff" stroke="#d5d9de" stroke-width="3"/>
-  <g stroke="#3c4043" stroke-width="14" stroke-linecap="round">
-    <line x1="30" y1="40" x2="86" y2="40"/>
-    <line x1="30" y1="66" x2="98" y2="66"/>
-    <line x1="30" y1="92" x2="62" y2="92"/>
-  </g>
-  <rect x="76" y="81" width="10" height="22" rx="5" fill="#4285f4"/>
+  <!-- Note silhouette with a folded bottom-right corner. The diagonal sits on
+       x+y=195.5 so that a 128px export reproduces the original icon128.png
+       exactly, pixel for pixel; crispEdges disables antialiasing to match its
+       hard edges. -->
+  <path d="M16 16H112V83.5L83.5 112H16Z" fill="#000000" shape-rendering="crispEdges"/>
 </svg>
