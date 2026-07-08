@@ -19,6 +19,8 @@
 * `npm test` — behavioral tests that drive `tab.js` against a stubbed
   `chrome.storage` and DOM. No dependencies needed.
 * `npm run lint` — ESLint via npx. Both run in CI on every push and PR.
+* Icons are rendered from [`icon.svg`](icon.svg):
+  `docker run --rm -v "$PWD":/work -w /work alpine:3 sh -c 'apk add --no-cache rsvg-convert && for s in 16 48 128; do rsvg-convert -w $s -h $s icon.svg -o icon$s.png; done'`
 
 ## Releasing
 
@@ -29,7 +31,7 @@ hand at the [Chrome Web Store developer dashboard](https://chrome.google.com/web
 
 ## Todo
 
-* [ ] Nicer icon, maybe something like [this](http://www.flaticon.com/free-icon/note_33410#term=notes&page=1&position=35)
+* [x] Nicer icon — drawn in `icon.svg`, rendered to PNGs
 * [x] Better Chrome Extension Javascript — promise-based storage, `input` events, cross-tab sync
 * [x] Tests, lint — `node --test` behavioral suite + ESLint, run in CI.
 
